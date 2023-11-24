@@ -7,24 +7,20 @@ function getPosition() {
   });
 }
 
-// this should return a promise ; now this will be the action creator which we will call
+// should return a promise
 export const fetchAddress = createAsyncThunk(
-  // action type name
   'user/fetchAddress',
   async function () {
-    // 1) get user geolocation
     const positionObj = await getPosition();
     const position = {
       latitude: positionObj.coords.latitude,
       longitude: positionObj.coords.longitude,
     };
 
-    // 2) reverse geocode the position and display (user can change)
     const addressObj = await getAddress(position);
     const address = `${addressObj?.locality}, ${addressObj?.city} ${addressObj?.postcode}, ${addressObj?.countryName}`;
 
-    // 3) return only needed data
-    // payload of fulfilled state
+    // return only needed data
     return { position, address };
   },
 );
@@ -45,7 +41,7 @@ const userSlice = createSlice({
       state.username = action.payload;
     },
   },
-  // redux thunks (fetching)
+  // redux thunks
   extraReducers: (builder) =>
     builder
       .addCase(fetchAddress.pending, (state) => {
