@@ -41,7 +41,7 @@ function CreateOrder() {
 
   return (
     <div className="px-4 py-6">
-      <h2 className="mb-8 text-xl font-semibold">Ready to order? Let's go!</h2>
+      <h2 className="mb-8 text-xl font-semibold">Ready to order? Let us go!</h2>
 
       <Form method="POST" action="/order/new">
         <div className="mb-5 flex flex-col sm:flex-row sm:items-center">
