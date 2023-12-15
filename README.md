@@ -11,15 +11,5 @@ A basic pizza store with cart & geolocation (fetch address) functionality to rei
 - [Redux Toolkit Query](https://redux-toolkit.js.org/rtk-query/overview)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-## Getting Started
-
-```bash
-# install dependencies
-$ npm install
-
-# run at your localhost
-$ npm run dev
-
-# build for production
-$ npm run build
-```
+### Project Preview
+![Project Preview](/public/project-preview.png)

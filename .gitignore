@@ -23,3 +23,5 @@ notes
 *.njsproj
 *.sln
 *.sw?
+
+package.json
